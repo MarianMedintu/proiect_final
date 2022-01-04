@@ -1,0 +1,54 @@
+*{
+  margin:0;
+  padding:0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');
+
+.App {
+  text-align: center;
+  border: 2px solid red;
+  .header{
+    border: 2px solid blue;
+    .login_bar{
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid orange;
+      //height: 2rem;
+      align-items:center;
+      margin: 1rem auto;
+
+      p{
+        background: -webkit-linear-gradient(#f8a6a6, #00fff7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.5rem;
+        font-family: Rajdhani, serif;
+
+      }
+      form{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        input{
+          margin:0 5px;
+          font-size: 1.1rem;
+          &:active{
+            border-color:grey;
+          }
+        }
+        button{
+          font-size: 1.2rem;
+          padding: 3px 10px;
+          border: none;
+          background-color: white;
+          color: grey;
+          &:hover{
+            color:black;
+
+          }
+        }
+      }
+    }
+  }
+}

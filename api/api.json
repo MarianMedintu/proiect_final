@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "name": "Admin",
+      "password": "thepassword",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "username": "gigel",
+      "name": "Gigel",
+      "password": "popescu",
+      "isAdmin": false
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Cartofi",
+      "slug": "cartofi",
+      "weight": 2,
+      "color": "red"
+    },
+    {
+      "id": 2,
+      "name": "Pepene verde",
+      "slug": "pepene-verde",
+      "weight": 10,
+      "color": "green"
+    },
+    {
+      "name": "ridichi",
+      "slug": "ridichi",
+      "weight": "2",
+      "color": "red",
+      "id": 3
+    },
+    {
+      "name": "",
+      "slug": "",
+      "weight": 0,
+      "color": "black",
+      "id": 4
+    }
+  ]
+}

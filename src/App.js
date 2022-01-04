@@ -36,9 +36,14 @@ function App() {
       <div className="App">
         <UserInfo.Provider value={userInfo}>
           <BrowserRouter>
+
             <div className={'header'}>
+              <div className={'login_bar container'}>
+                <p>Shinerr</p>
+                <Login onLogin={handleLogin} onLogout={handleLogout} />
+              </div>
               <Menu />
-              <Login onLogin={handleLogin} onLogout={handleLogout} />
+
             </div>
             <Routes>
               <Route path={'/'} element={<Home />} />

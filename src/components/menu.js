@@ -8,7 +8,7 @@ export function Menu() {
 
     return (
         <nav className={"Menu"}>
-            <NavLink to="/"> Home</NavLink>
+            <NavLink aria-hidden={true} to="/"> Home</NavLink>
             <NavLink to="/contact-us"> Contact</NavLink>
             <NavLink to="/produse"> Products </NavLink>
             {currenUserInfo.isAdmin && (

@@ -21,7 +21,7 @@ export function Login({onLogin, onLogout}) {
     function handleSubmit(e) {
         e.preventDefault();
         setLoginError(null);
-        fetch('http://localhost:3001/users')
+        fetch('http://localhost:3000/users')
             .then((r) => r.json())
             .then((userList) => {
                 const foundUser = userList.find((user) => {
