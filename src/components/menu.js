@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {NavLink} from "react-router-dom";
 import './menu.scss'
 import {UserInfo} from "./login";
@@ -16,15 +16,22 @@ import {UserInfo} from "./login";
 
 export function Menu() {
     const currenUserInfo = useContext(UserInfo);
+    const [showMenu, setShowMenu] = useState(false);
+    const [showButton, setShowMButton] = useState(false);
+    function toggleMenu() {
+        setShowMenu(state => !state)
+    }
     return (
         <>
-            <button className={'mobile-nav-toggle'}
+            <button className={`mobile-nav-toggle ${showMenu ? "visible": ""}`}
                     aria-controls={'primary-nav'}
-                    aria-expanded={false}>
+                    aria-expanded={false}
+                    onClick={toggleMenu}
+            >
                 <span></span>
             </button>
-            <nav id={'primary-nav'} className={"primary-nav"}
-            data-visible={false}>
+            <nav id={'primary-nav'} className={`primary-nav ${showMenu ? "visible": ""}`}
+            >
                 <NavLink to="/"> Home</NavLink>
                 <NavLink to="/contact-us"> Contact</NavLink>
                 <NavLink to="/products"> Products </NavLink>
