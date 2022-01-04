@@ -22,7 +22,7 @@ export function ProductList() {
             <h1>Product list</h1>
             <ul>
                 {productList.map(({id, name, slug}) => (
-                    <li key={id}><NavLink to={`/produse/${slug}-id-${id}`}> {name} </NavLink></li>
+                    <li key={id}><NavLink to={`/products/${slug}-id-${id}`}> {name} </NavLink></li>
                 ))}
             </ul>
         </div>

@@ -6,14 +6,14 @@
 
 .App {
   text-align: center;
-  border: 2px solid red;
+  //border: 2px solid red;
   .header{
-    border: 2px solid blue;
+    //border: 2px solid blue;
     .login_bar{
       display:flex;
       flex-direction: column;
       justify-content: space-between;
-      border: 2px solid orange;
+      //border: 2px solid orange;
       //height: 2rem;
       align-items:center;
       margin: 1rem auto;

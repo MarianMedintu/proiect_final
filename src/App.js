@@ -9,6 +9,7 @@ import { About } from "./pages/about/about";
 import { anonymousUserInfo, Login, UserInfo } from "./components/login";
 import { useState } from "react";
 import { AddProduct } from "./pages/admin/add-product";
+import { LoginPage } from "./pages/login/login-page";
 
 
 const userInfoStoreKey = 'userInfo'
@@ -50,6 +51,7 @@ function App() {
               <Route path={'/contact-us'} element={<ContactUs />} />
               <Route path={'/about/*'} element={<About />} />
               <Route path={'/produse/*'} element={<Products />} />
+              <Route path={'/login-page'} element={<LoginPage />} />
               <Route path={'/admin/add-product'} element={<AddProduct />} />
               <Route path={'*'} element={<NotFound />} />
             </Routes>

@@ -1,12 +1,53 @@
+body{
+  overflow: hidden;
+}
 
-.Menu {
+@media(max-width: 35rem){
+  .primary-nav{
+    position: fixed;
+    inset: 0 0 0 40%;
+    display:flex;
+    gap: 1.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: min(30vh, 9rem) 2rem;
+    z-index: 100;
+    transform: translateX(100%);
+    a{
+      //padding: 10rem 2rem;
+    }
+  }
+  .mobile-nav-toggle{
+    display:block;
+    position:absolute;
+    z-index:999;
+    width: 3rem;
+    aspect-ratio: 1;
+    top: 10rem;
+    left: 2rem;
+    background: url("../images/home/icons8-menu.svg");
+    background-size: cover;
+    border: 0;
+  }
+}
+.primary-nav[data-visible="true"]{
+  transform:translateX(0%);
+}
+//.mobile-nav-toggle{
+//  display:none;
+//}
+.primary-nav {
   list-style: none;
-  padding: 0;
-  margin: 0;
-
+  //padding: 0;
+  //margin: 0;
+  background: hsl(0 0% 100% / 0.9);
+  @supports (backdrop-filter: blur(1rem)) {
+    background: hsl(0 0% 100% / 0.3);
+    backdrop-filter: blur(1rem);
+}
   a {
     text-decoration: none;
-    color: #9f9e9e;
+    color: #818181;
     font-size: 1.4rem;
     text-transform: uppercase;
     margin: 10px 10px;
