@@ -50,7 +50,7 @@ function App() {
               <Route path={'/'} element={<Home />} />
               <Route path={'/contact-us'} element={<ContactUs />} />
               <Route path={'/about/*'} element={<About />} />
-              <Route path={'/produse/*'} element={<Products />} />
+              <Route path={'/products/*'} element={<Products />} />
               <Route path={'/login-page'} element={<LoginPage />} />
               <Route path={'/admin/add-product'} element={<AddProduct />} />
               <Route path={'*'} element={<NotFound />} />
