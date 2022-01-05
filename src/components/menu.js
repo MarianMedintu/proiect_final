@@ -17,28 +17,56 @@ import {UserInfo} from "./login";
 export function Menu() {
     const currenUserInfo = useContext(UserInfo);
     const [showMenu, setShowMenu] = useState(false);
+    const [showCart, setShowCart] = useState(false);
+
     function toggleMenu() {
         setShowMenu(state => !state)
+        if (showCart === true) {
+        toggleCart()
+        }
+    }
+
+    function toggleCart() {
+        setShowCart(state => !state)
+        if (showMenu === true) {
+            toggleMenu()
+        }
     }
 
     return (
         <>
-            <button className={`mobile-nav-toggle ${showMenu ? "visible": ""}`}
-                    aria-controls={'primary-nav'}
-                    onClick={toggleMenu}
-            >
-                <span></span>
-            </button>
-            <nav onClick={toggleMenu} id={'primary-nav'} className={`primary-nav ${showMenu ? "visible": ""}`}
-            >
-                <NavLink to="/"> Home</NavLink>
-                <NavLink to="/contact-us"> Contact</NavLink>
-                <NavLink to="/products"> Products </NavLink>
-                <NavLink to="/login-page"> Login </NavLink>
-                {currenUserInfo.isAdmin && (
-                    <NavLink to="/admin/add-product"> Add Product </NavLink>
-                )}
-            </nav>
+            <div>
+                <button className={`mobile-nav-toggle ${showMenu ? "visible" : ""}`}
+                        aria-controls={'primary-nav'}
+                        onClick={toggleMenu}
+                >
+                    <span></span>
+                </button>
+                <nav onClick={toggleMenu} id={'primary-nav'} className={`primary-nav ${showMenu ? "visible" : ""}`}
+                >
+                    <NavLink to="/"> Home</NavLink>
+                    <NavLink to="/contact-us"> Contact</NavLink>
+                    <NavLink to="/products"> Products </NavLink>
+                    <NavLink to="/login-page"> Login </NavLink>
+                    {currenUserInfo.isAdmin && (
+                        <NavLink to="/admin/add-product"> Add Product </NavLink>
+                    )}
+                </nav>
+            </div>
+
+            <div>
+                <button className={`cart-toggle ${showCart ? "visible" : ""}`}
+                        aria-controls={'cart-nav'}
+                        onClick={toggleCart}
+                >
+                    <span></span>
+                </button>
+                <nav onClick={toggleCart} id={'cart-nav'} className={`cart-nav ${showCart ? "visible" : ""}`}
+                >
+                    <NavLink to="/cart">Show Cart</NavLink>
+                    <span>Cart icon</span>
+                </nav>
+            </div>
         </>
     )
 }
