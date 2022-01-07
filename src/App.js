@@ -6,7 +6,7 @@ import { NotFound } from "./pages/not-found";
 import { Menu } from "./components/menu";
 import { Products } from "./pages/products";
 import { About } from "./pages/about/about";
-import { anonymousUserInfo, Login, UserInfo } from "./components/login";
+import { anonymousUserInfo, Login, UserInfo } from "./pages/login/login";
 import { useState } from "react";
 import { AddProduct } from "./pages/admin/add-product";
 import { LoginPage } from "./pages/login/login-page";
@@ -37,14 +37,9 @@ function App() {
       <div className="App">
         <UserInfo.Provider value={userInfo}>
           <BrowserRouter>
-
             <div className={'header'}>
-              <div className={'login_bar container'}>
-                <p>Shinerr</p>
-                <Login onLogin={handleLogin} onLogout={handleLogout} />
-              </div>
+              <p>Shinerr</p>
               <Menu />
-
             </div>
             <Routes>
               <Route path={'/'} element={<Home />} />
