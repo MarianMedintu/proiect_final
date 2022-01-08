@@ -38,7 +38,7 @@ function App() {
         <UserInfo.Provider value={userInfo}>
           <BrowserRouter>
             <div className={'header'}>
-              <p>Shinerr</p>
+              <p> <a href={'/'}>Shinerr</a></p>
               <Menu />
             </div>
             <Routes>
