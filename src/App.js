@@ -10,6 +10,7 @@ import {useState} from "react";
 import {AddProduct} from "./pages/admin/add-product";
 import {LoginPage} from "./pages/login/login-page";
 import {AboutUs} from "./pages/about/about-us";
+import {Cart} from "./pages/cart/cart";
 
 const userInfoStoreKey = 'userInfo'
 
@@ -41,6 +42,7 @@ const [cart,setCart] = useState([]);
                         <Route path={'/products/*'} element={<Products onAddToCart={handleAddToCart} />}/>
                         <Route path={'/login-page'} element={<LoginPage/>}/>
                         <Route path={'/admin/add-product'} element={<AddProduct/>}/>
+                        <Route path={'/cart'} element={<Cart cart={cart}/>}/>
                         <Route path={'*'} element={<NotFound/>}/>
                     </Routes>
                 </BrowserRouter>

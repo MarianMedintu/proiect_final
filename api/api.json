@@ -18,19 +18,19 @@
   "products": [
     {
       "id": 1,
-      "name": "Miami",
-      "slug": "miami",
+      "name": "Stormy night",
+      "slug": "stormy",
       "weight": 200,
       "price": "40",
-      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
+      "url": "https://cdn.notinoimg.com/detail_thumb/dw-home/2800011917957_01-o/dw-home-stormy-night-lumanare-parfumata_.jpg"
     },
     {
       "id": 2,
-      "name": "Peaceful",
-      "slug": "peaceful",
+      "name": "Trilogy",
+      "slug": "trilogy",
       "weight": 300,
       "price": "50",
-      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
+      "url": "https://cdn.notinoimg.com/detail_thumb/woodwick/663595939119_01-o/woodwick-trilogy-warm-woods-lumanare-parfumata-cu-fitil-din-lemn___5.jpg"
     },
     {
       "id": 3,
@@ -38,40 +38,48 @@
       "slug": "tobacco",
       "weight": 200,
       "price": "30",
-      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
+      "url": "https://cdn.notinoimg.com/detail_thumb/smells-like-spells/4779040750157_01-o/smells-like-spells-norse-magic-mimir-lumanare-parfumata-cu-fitil-din-lemn-relaxation_meditation___3.jpg"
     },
     {
       "id": 4,
-      "name": "Summer",
-      "slug": "summer",
+      "name": "Reminiscense",
+      "slug": "reminiscense",
       "weight": 300,
       "price": "55",
-      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
+      "url": "https://cdn.notinoimg.com/detail_thumb/souletto/3760275387400_01-o/souletto-reminiscense-scented-candle-lumanare-parfumata_.jpg"
     },
     {
-      "name": "Lilly",
-      "slug": "lilly",
+      "name": "Black Peppercorn",
+      "slug": "blackpeppercorn",
       "weight": 500,
       "color": "black",
       "id": 5,
       "price": "30",
-      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
+      "url": "https://cdn.notinoimg.com/detail_thumb/woodwick/5038581103150_01-o/woodwick-black-peppercorn-lumanare-parfumata-cu-fitil-din-lemn_.jpg"
     },
     {
-      "name": "Tropical",
-      "slug": "tropical",
+      "name": "Apothecary",
+      "slug": "apothecary",
       "weight": 400,
       "price": "30",
-      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg",
+      "url": "https://cdn.notinoimg.com/detail_thumb/paddywax/647658389523_01-o/paddywax-apothecary-amber-smoke-lumanare-parfumata___5.jpg",
       "id": 6
     },
+    {
+      "name": "Christmas",
+      "slug": "christmas",
+      "weight": 400,
+      "price": "45",
+      "url": "https://cdn.notinoimg.com/detail_thumb/yankee-candle/yaccheh_dcan20_01/yankee-candle-christmas-eve-lumanare-parfumata___12.jpg",
+      "id": 7
+    }
     {
       "name": "Ocean",
       "slug": "ocean",
       "weight": 400,
       "price": "45",
       "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg",
-      "id": 7
+      "id": 8
     }
   ]
 }

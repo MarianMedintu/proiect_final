@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import './contact.scss'
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField,TextareaAutosize } from "@mui/material";
 
-function Input(props) {
-    const {label,type,name} = props;
-    return (<FormControl>
-        <label>{label}:</label>
-        <input type={type} name={name}/>
-    </FormControl>)
-}
+// function Input(props) {
+//     const {label,type,name} = props;
+//     return (<FormControl>
+//         <label>{label}:</label>
+//         <input type={type} name={name}/>
+//     </FormControl>)
+// }
 // function FormControl(props){
 //     return (
 //         <div className={"form-control"}>
@@ -17,13 +17,13 @@ function Input(props) {
 //         </div>
 //     )
 // }
-function TextArea(props){
-    const {label,name} = props;
-    return (<Input>
-        <label>{label}</label>
-        <textarea name={name}/>
-    </Input>)
-}
+// function TextArea(props){
+//     const {label,name} = props;
+//     return (<Input>
+//         <label>{label}</label>
+//         <textarea name={name}/>
+//     </Input>)
+// }
 
 function Form(props){
     return (<form action={"#"} method="post">

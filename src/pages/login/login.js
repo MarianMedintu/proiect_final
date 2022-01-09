@@ -71,6 +71,7 @@ export function Login({onLogin, onLogout}) {
                 </label>
             </div>
             <button type={'submit'}>Login</button>
+            <p><a href={'/'}>Register</a></p>
             <div className={'alternative_login'}>
                 <div className={'facebook_login'}>
                     <img

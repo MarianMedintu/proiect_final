@@ -1,0 +1,10 @@
+.cart_page{
+  height:70%;
+}
+.cart_page .cart-products {
+  display: block;
+  li{
+    margin: 1rem 3rem;
+    list-style-type: none;
+  }
+}
