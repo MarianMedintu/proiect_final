@@ -1,31 +1,9 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import './contact.scss'
-import { Button, FormControl, InputLabel, MenuItem, Select, TextField,TextareaAutosize } from "@mui/material";
+import { FormControl, TextField,TextareaAutosize } from "@mui/material";
 
-// function Input(props) {
-//     const {label,type,name} = props;
-//     return (<FormControl>
-//         <label>{label}:</label>
-//         <input type={type} name={name}/>
-//     </FormControl>)
-// }
-// function FormControl(props){
-//     return (
-//         <div className={"form-control"}>
-//             {props.children}
-//         </div>
-//     )
-// }
-// function TextArea(props){
-//     const {label,name} = props;
-//     return (<Input>
-//         <label>{label}</label>
-//         <textarea name={name}/>
-//     </Input>)
-// }
-
-function Form(props){
+function Form(){
     return (<form action={"#"} method="post">
         <TextField label={"name"} type={"text"} name={"name"} />
         <TextField label={"surname"} type={"text"} name={"surname"} />

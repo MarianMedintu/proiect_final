@@ -1,59 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
 @import '../../components/button';
+
 $base-color: #818181;
 $hover-color: black;
 
-.contact-form{
+.contact-form {
   max-width: 1280px;
   height: 75vh;
   margin: 0 auto;
   font-family: Rajdhani, sans-serif;
+
   form {
     display: flex;
     flex-direction: column;
     padding: 3rem;
-    .checkbox-area{
+
+    .checkbox-area {
       width: 100%;
-.form_checkbox{
-  display: flex;
-  margin: 1rem 0;
-  align-items: center;
-  .checkbox{
-    margin-right: 1rem;
-    align-items: flex-start;
-    align-content: flex-start;
-padding-top: .5rem;
-  }
-  input{
-    display: block;
-    transform: scale(1.7);
-    margin-left: .5rem;
-  }
-  p{
-    font-size: .8rem;
-    font-family: Rajdhani, sans-serif;
-    color: $base-color;
-  }
-}
+
+      .form_checkbox {
+        display: flex;
+        margin: 1rem 0;
+        align-items: center;
+
+        .checkbox {
+          margin-right: 1rem;
+          align-items: flex-start;
+          align-content: flex-start;
+          padding-top: .5rem;
+        }
+
+        input {
+          display: block;
+          transform: scale(1.7);
+          margin-left: .5rem;
+        }
+
+        p {
+          font-size: .8rem;
+          font-family: Rajdhani, sans-serif;
+          color: $base-color;
+        }
+      }
     }
-    div{
+
+    div {
       margin-bottom: .5rem;
     }
-    textarea{
+
+    textarea {
       min-height: 50px;
       font-size: 1rem;
       line-height: 1.2rem;
       padding: 1rem;
       font-family: Rajdhani, sans-serif;
     }
-    .button-container{
+
+    .button-container {
       display: flex;
       flex-direction: initial;
       justify-content: space-around;
-margin: 0;
-      button{
+      margin: 0;
+
+      button {
         @include ButtonStyle();
-        &:first-of-type{
+
+        &:first-of-type {
           font-weight: bold;
           font-size: 1.6rem;
         }

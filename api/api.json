@@ -10,7 +10,7 @@
     {
       "id": 2,
       "username": "username1",
-      "name": "Person 1",
+      "name": "Popescu George",
       "password": "username1",
       "isAdmin": false
     }
@@ -30,7 +30,7 @@
       "slug": "trilogy",
       "weight": 300,
       "price": "50",
-      "url": "https://cdn.notinoimg.com/detail_thumb/woodwick/663595939119_01-o/woodwick-trilogy-warm-woods-lumanare-parfumata-cu-fitil-din-lemn___5.jpg"
+      "url": "https://cdn.notinoimg.com/detail_thumb/milkhouse-candle-co/877558001779_01-o/milkhouse-candle-co-creamery-pure-vanilla-lumanare-parfumata-butter-jar___3.jpg"
     },
     {
       "id": 3,
@@ -55,7 +55,7 @@
       "color": "black",
       "id": 5,
       "price": "30",
-      "url": "https://cdn.notinoimg.com/detail_thumb/woodwick/5038581103150_01-o/woodwick-black-peppercorn-lumanare-parfumata-cu-fitil-din-lemn_.jpg"
+      "url": "https://cdn.notinoimg.com/detail_thumb/bath-body-works/667554761421_01-o/bath-body-works-cinnamon-spiced-vanilla-lumanare-parfumata-i___2.jpg"
     },
     {
       "name": "Apothecary",
@@ -72,7 +72,7 @@
       "price": "45",
       "url": "https://cdn.notinoimg.com/detail_thumb/yankee-candle/yaccheh_dcan20_01/yankee-candle-christmas-eve-lumanare-parfumata___12.jpg",
       "id": 7
-    }
+    },
     {
       "name": "Ocean",
       "slug": "ocean",

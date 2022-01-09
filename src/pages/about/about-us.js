@@ -2,8 +2,6 @@ import React from 'react';
 import './about-us.scss'
 
 export function AboutUs() {
-
-
     return (
         <div className={'aboutUs-container'}>
             <div className={'our-story'}>

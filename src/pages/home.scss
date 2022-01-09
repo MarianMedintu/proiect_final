@@ -6,7 +6,6 @@
     max-width: 1280px;
     margin: 0 auto;
   }
-  //height: 90vh;
   .background-image {
     background-size: cover;
     background-position: center;
@@ -18,34 +17,15 @@
     align-items: flex-start;
     padding: 1rem;
     div.container{
-      //width: 75%;
       max-width:1280px;
       font-size: 1.5rem;
       text-align: left;
       font-family: 'PT Serif', serif;
-      //font-family: 'Playfair Display', serif;
-      //font-style: italic;
       *{
         padding: .5rem;
       }
       button{
         @include ButtonStyle();
-        //margin-top: 1rem;
-        //padding: 1rem 2rem;
-        ////@include ToggleMenu()
-        //  text-decoration: none;
-        //  color: #818181;
-        //background-color: white;
-        //  font-size: 1.4rem;
-        //  text-transform: uppercase;
-        //  font-family: Rajdhani, sans-serif;
-        //border: none;
-        //&:hover {
-        //  color: black;
-        //}
-        //&:active{
-        //  background-color: #e3e3e3;
-        //}
       }
     }
   }

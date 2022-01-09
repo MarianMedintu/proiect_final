@@ -30,7 +30,6 @@ export function AddProduct() {
             .catch(() => setMessage('The product has not been added'))
     }
 
-
     if (!currenUserInfo.isAdmin) {
         return (
             <div>
@@ -56,7 +55,6 @@ export function AddProduct() {
                     <MenuItem value={400}>400 g</MenuItem>
                 </Select>
             </FormControl>
-
             <div>
                 <Button variant="contained" type={'submit'}>Add product</Button>
             </div>

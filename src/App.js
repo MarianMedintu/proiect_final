@@ -5,7 +5,7 @@ import {ContactUs} from "./pages/contact/contact-us";
 import {NotFound} from "./pages/not-found";
 import {Menu} from "./components/menu";
 import {Products} from "./pages/products";
-import {anonymousUserInfo, Login, UserInfo} from "./pages/login/login";
+import {anonymousUserInfo, UserInfo} from "./pages/login/login";
 import {useState} from "react";
 import {AddProduct} from "./pages/admin/add-product";
 import {LoginPage} from "./pages/login/login-page";
@@ -22,8 +22,9 @@ if (storedUserInfoStr) {
 
 function App() {
     const [userInfo, setUserInfo] = useState(currentUser)
-const [cart,setCart] = useState([]);
-    function handleAddToCart(product){
+    const [cart, setCart] = useState([]);
+
+    function handleAddToCart(product) {
         setCart([...cart, product])
     }
 
@@ -39,7 +40,7 @@ const [cart,setCart] = useState([]);
                         <Route path={'/'} element={<Home/>}/>
                         <Route path={'/contact-us'} element={<ContactUs/>}/>
                         <Route path={'/about/us'} element={<AboutUs/>}/>
-                        <Route path={'/products/*'} element={<Products onAddToCart={handleAddToCart} />}/>
+                        <Route path={'/products/*'} element={<Products onAddToCart={handleAddToCart}/>}/>
                         <Route path={'/login-page'} element={<LoginPage/>}/>
                         <Route path={'/admin/add-product'} element={<AddProduct/>}/>
                         <Route path={'/cart'} element={<Cart cart={cart}/>}/>
@@ -52,13 +53,19 @@ const [cart,setCart] = useState([]);
                 <div className={'footer_block'}>
                     <div className={'social_links'}>
                         <div className={'facebook_link'}>
-                            <a href={'https://www.facebook.com/'}><img src={'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png'}/> </a>
+                            <a href={'https://www.facebook.com/'}><img
+                                src={'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png'}
+                                alt={'fb'}/> </a>
                         </div>
                         <div className={'Instagram_link'}>
-                            <a href={'https://twitter.com/home?lang=ro'}><img src={'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png'}/> </a>
+                            <a href={'https://twitter.com/home?lang=ro'}><img
+                                src={'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png'}
+                                alt={'fb'}/> </a>
                         </div>
                         <div className={'Twitter_link'}>
-                            <a href={'https://www.instagram.com/'}><img src={'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1245px-Twitter-logo.svg.png'}/> </a>
+                            <a href={'https://www.instagram.com/'}><img
+                                src={'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1245px-Twitter-logo.svg.png'}
+                                alt={'fb'}/> </a>
                         </div>
                     </div>
                     <div className={'paragraphs'}>
