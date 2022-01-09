@@ -40,9 +40,11 @@ export function Login({onLogin, onLogout}) {
 
     if (currenUserInfo.id) {
         return (
-            <div>
-                Hello: {currenUserInfo.name}
-                <button onClick={onLogout}>Logout</button>
+            <div className={'loggedIn_block'}>
+                <div>
+                    Hello: {currenUserInfo.name}
+                </div>
+                <button className={'logout'} onClick={onLogout}>Logout</button>
             </div>
         )
     }
@@ -51,11 +53,13 @@ export function Login({onLogin, onLogout}) {
         <form className={'login_form'} onSubmit={handleSubmit}>
             <div className={'login_field'}>
                 <label className={'form_label'} htmlFor={'username'}>Username:</label>
-                <input className="form_input username" id={"username"} placeholder={'Type your username here'} {...formProps.username} />
+                <input className="form_input username" id={"username"}
+                       placeholder={'Type your username here'} {...formProps.username} />
             </div>
             <div className={'login_field'}>
                 <label className={'form_label'} htmlFor={'password'}>Password:</label>
-                <input className="form_input password" type={'password'} placeholder={'Type your password here'} {...formProps.password} />
+                <input className="form_input password" type={'password'}
+                       placeholder={'Type your password here'} {...formProps.password} />
             </div>
             <div className={'checkbox-area'}>
                 <label className={'form_checkbox'}>
@@ -69,11 +73,15 @@ export function Login({onLogin, onLogout}) {
             <button type={'submit'}>Login</button>
             <div className={'alternative_login'}>
                 <div className={'facebook_login'}>
-                    <img src={'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png'} alt={'facebook logo'} to={'https://www.facebook.com'}/>
+                    <img
+                        src={'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png'}
+                        alt={'facebook logo'} to={'https://www.facebook.com'}/>
                     <p><a href={'https://www.facebook.com'}>Login with Facebook account</a></p>
                 </div>
                 <div className={'google_login'}>
-                    <img src={'https://upload.wikimedia.org/wikipedia/commons/archive/5/53/20210618182605%21Google_%22G%22_Logo.svg'} alt={'facebook logo'} />
+                    <img
+                        src={'https://upload.wikimedia.org/wikipedia/commons/archive/5/53/20210618182605%21Google_%22G%22_Logo.svg'}
+                        alt={'google logo'}/>
                     <p><a href={'https://www.google.com'}> Login with Google account</a></p>
                 </div>
 

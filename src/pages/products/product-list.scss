@@ -1,8 +1,7 @@
-*{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
+$base-color: #818181;
+$hover-color: black;
+@import '../../components/button';
+
 .product-list{
   display: flex;
   flex-direction: column;
@@ -20,7 +19,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    //padding: 2rem;
+    margin-top: 4rem;
     @media (min-width: 500px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -60,17 +59,11 @@
         font-size: 1rem;
       }
       button {
+        @include ButtonStyle();
         margin: .5rem auto;
         transition: transform .2s; /* Animation */
         padding: .5rem 1rem;
-        //@include ToggleMenu()
-        text-decoration: none;
-        color: #818181;
-        background-color: white;
         font-size: .6rem;
-        text-transform: uppercase;
-        font-family: Rajdhani, sans-serif;
-        border: none;
         &:hover {
           color: black;
           //box-shadow: 1px 1px 7px 1px grey;

@@ -2,10 +2,9 @@ import React, {useContext, useState} from 'react';
 import {NavLink} from "react-router-dom";
 import './menu.scss'
 import {UserInfo} from "../pages/login/login";
-import {ProductList} from "../pages/products/product-list";
 
 
-export function Menu() {
+export function Menu({cart}) {
     const currenUserInfo = useContext(UserInfo);
     const [showMenu, setShowMenu] = useState(false);
     const [showCart, setShowCart] = useState(false);
@@ -32,11 +31,17 @@ export function Menu() {
                         onClick={toggleCart}
                 >
                     <span></span>
+
                 </button>
                 <nav onClick={toggleCart} id={'cart-nav'} className={`cart-nav ${showCart ? "visible" : ""}`}
                 >
-                    <NavLink to="/cart">Cart (0)</NavLink>
-                    <span href={'/cart'}></span>
+                    <NavLink to="/cart">Cart ({cart.length})</NavLink>
+                    <ul className={"cart-products"}>
+                        {cart.map(({id, name, slug}) => (
+                            <li className={'cart-container'} key={id}>
+                                <h3><NavLink to={`/products/${slug}-id-${id}`}> {name} </NavLink></h3>
+                            </li>))}
+                    </ul>
                 </nav>
             </div>
             <div className={"menu"}>

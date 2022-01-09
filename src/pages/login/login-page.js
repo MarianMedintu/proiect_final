@@ -15,11 +15,15 @@ export function LoginPage() {
     function handleLogin(newUser) {
         setUserInfo(newUser);
         sessionStorage.setItem(userInfoStoreKey, JSON.stringify(newUser))
+        // eslint-disable-next-line
+        location.reload();
     }
 
     function handleLogout() {
         setUserInfo(anonymousUserInfo);
         sessionStorage.setItem(userInfoStoreKey, JSON.stringify(anonymousUserInfo))
+        // eslint-disable-next-line
+        location.reload();
     }
     return (
         <UserInfo.Provider value={userInfo}>
@@ -27,7 +31,6 @@ export function LoginPage() {
                 <h2>Login:</h2>
                 <Login onLogin={handleLogin} onLogout={handleLogout} />
             </div>
-
         </UserInfo.Provider>
     )
 }

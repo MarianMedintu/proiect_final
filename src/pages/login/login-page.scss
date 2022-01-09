@@ -1,27 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
 @import '../../components/button';
 
-.login_bar{
-  h2{
+.login_bar {
+  height: 65%;
+
+  h2 {
     margin: 1.5rem auto;
   }
+
   width: 50%;
   margin: 5rem auto 2rem;
-  @media screen and (max-width: 728px){
+  @media screen and (max-width: 728px) {
     margin: 3rem auto 2rem;
     width: 90%;
   }
-  .login_form{
+
+  .login_form {
     display: flex;
     flex-direction: column;
-    .login_field{
+
+    .login_field {
       display: flex;
       flex-direction: column;
-    &:first-of-type{
-      //margin-bottom: 42px;
-    }
-      .form_label{
-          margin-bottom: 10px;
+
+      &:first-of-type {
+        //margin-bottom: 42px;
+      }
+
+      .form_label {
+        margin-bottom: 10px;
 
         font-family: Rajdhani, sans-serif;
         //font-weight: 600;
@@ -31,27 +38,32 @@
         letter-spacing: 3px;
         font-size: 1.1rem;
       }
-      .form_input{
-        border:none;
+
+      .form_input {
+        border: none;
         border-bottom: 1px solid #a5a5a5;
         background-color: transparent;
         line-height: 2rem;
         font-size: 1.1rem;
+
         &:last-of-type {
           margin-bottom: 40px;
         }
       }
-  }
-    button{
+    }
+
+    button {
       @include ButtonStyle();
     }
-    .alternative_login{
+
+    .alternative_login {
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
       align-content: center;
       align-items: center;
-      div{
+
+      div {
         width: 300px;
         display: flex;
         flex-direction: initial;
@@ -61,7 +73,7 @@
         border-radius: 2rem;
         margin-bottom: .5rem;
         //padding: 0 2rem;
-        img{
+        img {
           display: block;
           width: 3rem;
           margin: .5rem;
@@ -69,40 +81,48 @@
       }
     }
   }
-  .checkbox-area{
+
+  .checkbox-area {
     width: 50%;
-    @media screen and (max-width: 728px){
+    @media screen and (max-width: 728px) {
       width: 100%;
     }
-    .form_checkbox{
+
+    .form_checkbox {
       display: flex;
       align-items: center;
-      .checkbox{
+
+      .checkbox {
         margin-right: 1rem;
       }
-      input{
+
+      input {
         display: block;
         transform: scale(1.5);
         margin-left: .5rem;
       }
-      p{
+
+      p {
         font-size: 1rem;
         font-family: Rajdhani, sans-serif;
         color: grey;
       }
     }
   }
-  div{
+
+  div {
     margin-bottom: .5rem;
   }
-  textarea{
+
+  textarea {
     min-height: 50px;
     font-size: 1rem;
     line-height: 1.2rem;
     padding: 1rem;
     font-family: Rajdhani, sans-serif;
   }
-  .button-container{
+
+  .button-container {
     //display: grid;
     //grid-template-columns: 0.5fr 0.5fr;
     //gap: 10rem;
@@ -111,16 +131,38 @@
     justify-content: space-around;
     //gap: auto;
     margin: 0;
-    button{
+
+    button {
       @include ButtonStyle();
-      &:first-of-type{
+
+      &:first-of-type {
         font-weight: bold;
         font-size: 1.6rem;
       }
     }
   }
+
+  .loggedIn_block {
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    div {
+      padding: 16px 32px;
+      font-family: Rajdhani, sans-serif;
+      font-size: 1.4rem;
+    }
+
+    .logout {
+      @include ButtonStyle();
+    }
+  }
 }
-.login_field.form_input:focus{
-    border:2px solid red;
-    background-color: white;
+
+.login_field.form_input:focus {
+  border: 2px solid red;
+  background-color: white;
 }

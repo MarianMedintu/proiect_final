@@ -3,10 +3,14 @@ import { useParams } from "react-router";
 import { API } from "../../utils/constants";
 import { UserInfo } from "../login/login";
 
-export function ProductDetails() {
+export function ProductDetails({onAddToCart}) {
     const {productId} = useParams();
     const currenUserInfo = useContext(UserInfo);
     const [productDetails, setProductDetails] = useState(null);
+
+    function handleBuy() {
+        onAddToCart(productDetails);
+    }
 
     useEffect(() => {
         fetch(`${API}/products/${productId}`)
@@ -40,7 +44,7 @@ export function ProductDetails() {
                 </li>
                 {currenUserInfo.id && (
                     <li>
-                        <button>Buy</button>
+                        <button onClick={handleBuy}>Buy</button>
                     </li>
                 )}
             </ul>

@@ -4,15 +4,12 @@ import { ProductList } from "./product-list";
 import { ProductDetails } from "./product-details";
 
 
-export function Products() {
+export function Products({onAddToCart}) {
     return (
         <>
-            {/*<div style={{padding: '2rem', margin: '2rem', border: '1px solid black'}}>*/}
-            {/*    Favorite product list*/}
-            {/*</div>*/}
             <Routes>
-                <Route path={'/'} element={<ProductList />} />
-                <Route path={'/:productName-id-:productId'} element={<ProductDetails />} />
+                <Route path={'/'} element={<ProductList onAddToCart={onAddToCart} />} />
+                <Route path={'/:productName-id-:productId'} element={<ProductDetails onAddToCart={onAddToCart} />} />
             </Routes>
         </>
     )

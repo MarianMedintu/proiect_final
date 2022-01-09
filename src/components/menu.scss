@@ -1,12 +1,13 @@
-
+$base-color: #818181;
+$hover-color: black;
 @mixin ToggleMenu{
   text-decoration: none;
-  color: #818181;
+  color: $base-color;
   font-size: 1rem;
   text-transform: uppercase;
   font-family: Rajdhani, sans-serif;
 }
-@media(max-width: 700px){
+@media(max-width: 800px){
   .primary-nav{
     position: fixed;
     margin-right: 1rem;
@@ -39,7 +40,6 @@
     background: url("../images/home/icons8-menu.svg");
     background-size: cover;
     border: 0;
-
     &.visible{
       background: url("../images/home/icons7-close.svg");
       background-size: cover;
@@ -77,16 +77,16 @@
     left: 1rem;
     background: url("../images/home/icons8-shopping-cart-96.png");
     background-size: cover;
-    color: red;
     border: 0;
     &:hover{
-      color: grey;
+      color: $base-color;
     }
     &.visible{
       background: url("../images/home/icons7-close.svg");
       background-size: cover;
     }
   }
+
 }
 .primary-nav,.cart-nav {
   margin-right: 1rem;
@@ -96,11 +96,11 @@
     @include ToggleMenu();
     margin: 0 .75rem;
     &:hover{
-      color:black;
+      color: $hover-color;
     }
   }
   a.active {
-    color: black;
+    color: $hover-color;
   }
 }
 div.cart{
@@ -119,4 +119,23 @@ div.cart{
       align-self: center;
     }
   }
+}
+@media(min-width: 700px){
+  .cart-products{
+    display: none;
+  }
+}
+.cart-products{
+.cart-container{
+  list-style-type: none;
+  h3{
+    text-decoration: none;
+    font-weight: 400;
+    a{
+      color: #5b5b5b;
+      text-transform: capitalize;
+    }
+
+  }
+}
 }
