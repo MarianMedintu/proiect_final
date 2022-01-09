@@ -2,8 +2,15 @@
 @import '../../components/button';
 
 .login_bar{
+  h2{
+    margin: 1.5rem auto;
+  }
   width: 50%;
-  margin: 5rem auto;
+  margin: 5rem auto 2rem;
+  @media screen and (max-width: 728px){
+    margin: 3rem auto 2rem;
+    width: 90%;
+  }
   .login_form{
     display: flex;
     flex-direction: column;
@@ -14,28 +21,102 @@
       //margin-bottom: 42px;
     }
       .form_label{
-          margin-bottom: 5px;
+          margin-bottom: 10px;
 
         font-family: Rajdhani, sans-serif;
         //font-weight: 600;
         text-transform: uppercase;
         color: black;
-        line-height: 1.1rem;
+        line-height: 1.2rem;
         letter-spacing: 3px;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       .form_input{
         border:none;
         border-bottom: 1px solid #a5a5a5;
         background-color: transparent;
         line-height: 2rem;
+        font-size: 1.1rem;
         &:last-of-type {
-          margin-bottom: 50px;
+          margin-bottom: 40px;
         }
       }
   }
     button{
       @include ButtonStyle();
+    }
+    .alternative_login{
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      div{
+        width: 300px;
+        display: flex;
+        flex-direction: initial;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        border-radius: 2rem;
+        margin-bottom: .5rem;
+        //padding: 0 2rem;
+        img{
+          display: block;
+          width: 3rem;
+          margin: .5rem;
+        }
+      }
+    }
+  }
+  .checkbox-area{
+    width: 50%;
+    @media screen and (max-width: 728px){
+      width: 100%;
+    }
+    .form_checkbox{
+      display: flex;
+      align-items: center;
+      .checkbox{
+        margin-right: 1rem;
+      }
+      input{
+        display: block;
+        transform: scale(1.5);
+        margin-left: .5rem;
+      }
+      p{
+        font-size: 1rem;
+        font-family: Rajdhani, sans-serif;
+        color: grey;
+      }
+    }
+  }
+  div{
+    margin-bottom: .5rem;
+  }
+  textarea{
+    min-height: 50px;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 1rem;
+    font-family: Rajdhani, sans-serif;
+  }
+  .button-container{
+    //display: grid;
+    //grid-template-columns: 0.5fr 0.5fr;
+    //gap: 10rem;
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-around;
+    //gap: auto;
+    margin: 0;
+    button{
+      @include ButtonStyle();
+      &:first-of-type{
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from "react-router";
 import { API } from "../../utils/constants";
-import { UserInfo } from "../../components/login";
+import { UserInfo } from "../login/login";
 
 export function ProductDetails() {
     const {productId} = useParams();
@@ -22,22 +22,25 @@ export function ProductDetails() {
         )
     }
 
-    const {name, color, weight} = productDetails;
+    const {name,price,weight,url,slug,description} = productDetails;
 
     return (
         <div>
             <h1>{name}</h1>
-
+            <img src={url} alt={`${slug}.img`}/>
             <ul>
                 <li>
-                    Color: {color}
+                    Price: {price} lei
                 </li>
                 <li>
-                    Weight: {weight}
+                    Weight: {weight} g
+                </li>
+                <li>
+                    Description: {description}
                 </li>
                 {currenUserInfo.id && (
                     <li>
-                        <button>Cumpara</button>
+                        <button>Buy</button>
                     </li>
                 )}
             </ul>

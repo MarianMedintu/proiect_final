@@ -1,4 +1,4 @@
-import { UserInfo } from "../../components/login";
+import { UserInfo } from "../login/login";
 import { useContext, useState } from "react";
 import { useForm } from "../../utils/use-form";
 import { API } from "../../utils/constants";
@@ -10,8 +10,9 @@ export function AddProduct() {
     const [formValues, formProps] = useForm({
         name: '',
         slug: '',
-        weight: 0,
-        color: ''
+        weight: '',
+        price: '',
+        url:''
     })
     const [message, setMessage] = useState(null);
 
@@ -25,8 +26,8 @@ export function AddProduct() {
             },
             body: JSON.stringify(formValues)
         })
-            .then(() => setMessage('Produs creat'))
-            .catch(() => setMessage('Produsel nu a putut fi adaugat'))
+            .then(() => setMessage('Added product'))
+            .catch(() => setMessage('The product has not been added'))
     }
 
 
@@ -42,21 +43,22 @@ export function AddProduct() {
         <form className={'AddProductForm'} onSubmit={handleSubmit}>
             <TextField label={'Name'} type="text" {...formProps.name} />
             <TextField label={'Slug'} type="text" {...formProps.slug} />
-            <TextField label={'Weight'} type="number" {...formProps.weight} />
+            <TextField label={'URL'} type="text" {...formProps.url} />
+            <TextField label={'Price (lei)'} type={'number'} {...formProps.price} />
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">Weight</InputLabel>
                 <Select
-                    label="Color"
-                    {...formProps.color}
+                    label="Weight"
+                    {...formProps.weight}
                 >
-                    <MenuItem value={'red'}>Red</MenuItem>
-                    <MenuItem value={'black'}>Black</MenuItem>
-                    <MenuItem value={'yellow'}>Yellow</MenuItem>
+                    <MenuItem value={200}>200 g</MenuItem>
+                    <MenuItem value={300}>300 g</MenuItem>
+                    <MenuItem value={400}>400 g</MenuItem>
                 </Select>
             </FormControl>
 
             <div>
-                <Button variant="contained" type={'submit'}>Contained</Button>
+                <Button variant="contained" type={'submit'}>Add product</Button>
             </div>
             {message && (
                 <div>{message}</div>

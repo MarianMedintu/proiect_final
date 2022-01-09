@@ -4,45 +4,74 @@
       "id": 1,
       "username": "admin",
       "name": "Admin",
-      "password": "thepassword",
+      "password": "admin",
       "isAdmin": true
     },
     {
       "id": 2,
-      "username": "gigel",
-      "name": "Gigel",
-      "password": "popescu",
+      "username": "username1",
+      "name": "Person 1",
+      "password": "username1",
       "isAdmin": false
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "Cartofi",
-      "slug": "cartofi",
-      "weight": 2,
-      "color": "red"
+      "name": "Miami",
+      "slug": "miami",
+      "weight": 200,
+      "price": "40",
+      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
     },
     {
       "id": 2,
-      "name": "Pepene verde",
-      "slug": "pepene-verde",
-      "weight": 10,
-      "color": "green"
+      "name": "Peaceful",
+      "slug": "peaceful",
+      "weight": 300,
+      "price": "50",
+      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
     },
     {
-      "name": "ridichi",
-      "slug": "ridichi",
-      "weight": "2",
-      "color": "red",
-      "id": 3
+      "id": 3,
+      "name": "Tobacco",
+      "slug": "tobacco",
+      "weight": 200,
+      "price": "30",
+      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
     },
     {
-      "name": "",
-      "slug": "",
-      "weight": 0,
+      "id": 4,
+      "name": "Summer",
+      "slug": "summer",
+      "weight": 300,
+      "price": "55",
+      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
+    },
+    {
+      "name": "Lilly",
+      "slug": "lilly",
+      "weight": 500,
       "color": "black",
-      "id": 4
+      "id": 5,
+      "price": "30",
+      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg"
+    },
+    {
+      "name": "Tropical",
+      "slug": "tropical",
+      "weight": 400,
+      "price": "30",
+      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg",
+      "id": 6
+    },
+    {
+      "name": "Ocean",
+      "slug": "ocean",
+      "weight": 400,
+      "price": "45",
+      "url": "https://cdn.notinoimg.com/detail_thumb/notino/8059300536728_01/notino-home-collection-feelin-peaceful-cherry-blossom-scented-candle-lumanare-parfumata-220-g_.jpg",
+      "id": 7
     }
   ]
 }

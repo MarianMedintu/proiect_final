@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
+
+
+.aboutUs-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  font-family: "PT Serif", serif;
+  .our-story {
+    margin: 0 1rem;
+    h1 {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      margin: 0 auto;
+    }
+  }
+  .article-container {
+    @media screen and(max-width: 768px) {
+      flex-flow: column nowrap;
+      width: 90%;
+      }
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    margin: 32px auto;
+
+    .image-block {
+      width: 50%;
+      @media screen and(max-width: 768px){
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+      }
+    }
+
+    .content-block {
+      width:50%;
+      padding: 60px 24px 0;
+      align-self: flex-start;
+      margin: 0 auto;
+      @media screen and(max-width: 768px){
+        width: 100%;
+      }
+      h4 {
+        text-align: left;
+        font-size: 1.75rem;
+        line-height: 1.2;
+        letter-spacing: -.00625rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+        margin: 0 auto 28px;
+        min-width: 300px;
+      }
+    }
+  }
+}

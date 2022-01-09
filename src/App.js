@@ -1,15 +1,15 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from "./pages/home";
-import { ContactUs } from "./pages/contact-us";
+import { ContactUs } from "./pages/contact/contact-us";
 import { NotFound } from "./pages/not-found";
 import { Menu } from "./components/menu";
 import { Products } from "./pages/products";
-import { About } from "./pages/about/about";
 import { anonymousUserInfo, Login, UserInfo } from "./pages/login/login";
 import { useState } from "react";
 import { AddProduct } from "./pages/admin/add-product";
 import { LoginPage } from "./pages/login/login-page";
+import {AboutUs} from "./pages/about/about-us";
 
 
 const userInfoStoreKey = 'userInfo'
@@ -44,7 +44,7 @@ function App() {
             <Routes>
               <Route path={'/'} element={<Home />} />
               <Route path={'/contact-us'} element={<ContactUs />} />
-              <Route path={'/about/*'} element={<About />} />
+              <Route path={'/about/us'} element={<AboutUs />} />
               <Route path={'/products/*'} element={<Products />} />
               <Route path={'/login-page'} element={<LoginPage />} />
               <Route path={'/admin/add-product'} element={<AddProduct />} />

@@ -1,18 +1,9 @@
 import React, {useContext, useState} from 'react';
 import {NavLink} from "react-router-dom";
 import './menu.scss'
-import {UserInfo} from "./login";
+import {UserInfo} from "../pages/login/login";
+import {ProductList} from "../pages/products/product-list";
 
-// const primaryNav = document.querySelector('.primary-nav');
-// const navToggle = document.querySelector('.mobile-nav-toggle');
-// navToggle.addEventListener('click', () =>{
-// const visibility = primaryNav.getAttribute('data-visible')
-//     if(visibility === 'false') {
-//         primaryNav.setAttribute('data-visible',true);
-//     } else if (visibility === 'true') {
-//         primaryNav.setAttribute('data-visible', false);
-//     }
-// })
 
 export function Menu() {
     const currenUserInfo = useContext(UserInfo);
@@ -34,8 +25,21 @@ export function Menu() {
     }
 
     return (
-        <>
-            <div>
+        <div className={'header-bar'}>
+            <div className={'cart'}>
+                <button className={`cart-toggle ${showCart ? "visible" : ""}`}
+                        aria-controls={'cart-nav'}
+                        onClick={toggleCart}
+                >
+                    <span></span>
+                </button>
+                <nav onClick={toggleCart} id={'cart-nav'} className={`cart-nav ${showCart ? "visible" : ""}`}
+                >
+                    <NavLink to="/cart">Cart (0)</NavLink>
+                    <span href={'/cart'}></span>
+                </nav>
+            </div>
+            <div className={"menu"}>
                 <button className={`mobile-nav-toggle ${showMenu ? "visible" : ""}`}
                         aria-controls={'primary-nav'}
                         onClick={toggleMenu}
@@ -45,6 +49,7 @@ export function Menu() {
                 <nav onClick={toggleMenu} id={'primary-nav'} className={`primary-nav ${showMenu ? "visible" : ""}`}
                 >
                     <NavLink to="/"> Home</NavLink>
+                    <NavLink to="/about/us"> About us</NavLink>
                     <NavLink to="/contact-us"> Contact</NavLink>
                     <NavLink to="/products"> Products </NavLink>
                     <NavLink to="/login-page"> Login </NavLink>
@@ -53,20 +58,6 @@ export function Menu() {
                     )}
                 </nav>
             </div>
-
-            <div>
-                <button className={`cart-toggle ${showCart ? "visible" : ""}`}
-                        aria-controls={'cart-nav'}
-                        onClick={toggleCart}
-                >
-                    <span></span>
-                </button>
-                <nav onClick={toggleCart} id={'cart-nav'} className={`cart-nav ${showCart ? "visible" : ""}`}
-                >
-                    <NavLink to="/cart">Show Cart</NavLink>
-                    <span>Cart icon</span>
-                </nav>
-            </div>
-        </>
+        </div>
     )
 }

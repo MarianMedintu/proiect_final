@@ -1,15 +1,33 @@
-import React from 'react';
-import { Route, Routes } from "react-router-dom";
-import { AboutUs } from "../about/about-us";
-import { AboutCompany } from "./about-company";
-import {Login} from "../../components/login";
+import React, {useState} from 'react';
+import {anonymousUserInfo} from "./login";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {  Login, UserInfo } from "./login";
+const userInfoStoreKey = 'userInfo'
 
-
+let currentUser = anonymousUserInfo;
+const storedUserInfoStr = sessionStorage.getItem(userInfoStoreKey);
+if (storedUserInfoStr) {
+    currentUser = JSON.parse(storedUserInfoStr)
+}
 export function LoginPage() {
+    const [userInfo, setUserInfo] = useState(currentUser)
 
+    function handleLogin(newUser) {
+        setUserInfo(newUser);
+        sessionStorage.setItem(userInfoStoreKey, JSON.stringify(newUser))
+    }
+
+    function handleLogout() {
+        setUserInfo(anonymousUserInfo);
+        sessionStorage.setItem(userInfoStoreKey, JSON.stringify(anonymousUserInfo))
+    }
     return (
-        <div>
-            <h1>Login Page!</h1>
-        </div>
+        <UserInfo.Provider value={userInfo}>
+            <div className={'login_bar container'}>
+                <h2>Login:</h2>
+                <Login onLogin={handleLogin} onLogout={handleLogout} />
+            </div>
+
+        </UserInfo.Provider>
     )
 }
