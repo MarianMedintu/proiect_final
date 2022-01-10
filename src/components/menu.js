@@ -12,7 +12,7 @@ export function Menu({cart}) {
     function toggleMenu() {
         setShowMenu(state => !state)
         if (showCart === true) {
-        toggleCart()
+            toggleCart()
         }
     }
 

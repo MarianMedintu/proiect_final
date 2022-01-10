@@ -95,9 +95,11 @@ $hover-color: black;
   }
 
 }
+
 .primary-nav, .cart-nav {
   margin-right: 1rem;
   list-style: none;
+
   a {
     @include ToggleMenu();
     margin: 0 .75rem;
@@ -106,16 +108,19 @@ $hover-color: black;
       color: $hover-color;
     }
   }
+
   a.active {
     color: $hover-color;
   }
 }
+
 div.cart {
   nav {
     display: flex;
     align-items: center;
     align-content: center;
     align-self: center;
+
     span {
       background: url("../images/home/icons8-shopping-cart-96.png");
       width: 1.5rem;
@@ -127,17 +132,21 @@ div.cart {
     }
   }
 }
+
 @media(min-width: 700px) {
   .cart-products {
     display: none;
   }
 }
+
 .cart-products {
   .cart-container {
     list-style-type: none;
+
     h3 {
       text-decoration: none;
       font-weight: 400;
+
       a {
         color: #5b5b5b;
         text-transform: capitalize;

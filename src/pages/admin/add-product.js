@@ -1,9 +1,9 @@
-import { UserInfo } from "../login/login";
-import { useContext, useState } from "react";
-import { useForm } from "../../utils/use-form";
-import { API } from "../../utils/constants";
+import {UserInfo} from "../login/login";
+import {useContext, useState} from "react";
+import {useForm} from "../../utils/use-form";
+import {API} from "../../utils/constants";
 import './add-product.scss'
-import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
+import {Button, FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
 
 export function AddProduct() {
     const currenUserInfo = useContext(UserInfo);
@@ -12,7 +12,7 @@ export function AddProduct() {
         slug: '',
         weight: '',
         price: '',
-        url:''
+        url: ''
     })
     const [message, setMessage] = useState(null);
 

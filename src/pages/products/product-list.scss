@@ -2,19 +2,21 @@ $base-color: #818181;
 $hover-color: black;
 @import '../../components/button';
 
-.product-list{
+.product-list {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 90%;
   max-width: 1280px;
   align-items: center;
-  h1{
+
+  h1 {
     margin-top: .75rem;
     margin-bottom: 2rem;
     align-content: center;
   }
-  .all-products{
+
+  .all-products {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -38,37 +40,43 @@ $hover-color: black;
       flex-direction: column;
       align-items: center;
       transition: transform .5s; /* Animation */
-      h3{
+      h3 {
         text-transform: capitalize;
         font-size: 1.2rem;
         text-decoration: none;
 
-        a{
+        a {
           text-decoration: none;
           color: black;
         }
       }
-      &:hover{
+
+      &:hover {
         transform: scale(1.1);
       }
+
       img {
         width: 100%;
       }
-      h4{
+
+      h4 {
         margin-top: .3rem;
         font-size: 1rem;
       }
+
       button {
         @include ButtonStyle();
         margin: .5rem auto;
         transition: transform .2s; /* Animation */
         padding: .5rem 1rem;
         font-size: .6rem;
+
         &:hover {
           color: black;
           //box-shadow: 1px 1px 7px 1px grey;
           transform: scale(1.5);
         }
+
         &:active {
           background-color: #e3e3e3;
         }

@@ -1,28 +1,33 @@
 @import '../../components/button';
 
-.product_details{
+.product_details {
   max-width: 1280px;
   margin: 0 auto;
   height: 70%;
-div{
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h1{
-    margin: 3rem 0;
+
+  div {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin: 3rem 0;
+    }
+
+    img {
+      width: 200px;
+    }
+
+    li {
+      list-style-type: none;
+      padding: .5rem;
+    }
+
+    button {
+      @include ButtonStyle();
+    }
   }
-  img{
-    width: 200px;
-  }
-  li{
-    list-style-type: none;
-    padding: .5rem;
-  }
-  button{
-    @include ButtonStyle();
-  }
-}
 
 }

@@ -1,4 +1,4 @@
-@mixin ButtonStyle{
+@mixin ButtonStyle {
   margin-top: 1rem;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -9,12 +9,12 @@
   font-family: Rajdhani, sans-serif;
 
   border: none;
-display:inline-block;
+  display: inline-block;
   &:hover {
     color: black;
     transform: scale(1.1);
   }
-  &:active{
+  &:active {
     background-color: #e3e3e3;
   }
 }

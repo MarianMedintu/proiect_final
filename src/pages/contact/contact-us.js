@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import './contact.scss'
-import { FormControl, TextField,TextareaAutosize } from "@mui/material";
+import {FormControl, TextField, TextareaAutosize} from "@mui/material";
 
-function Form(){
+function Form() {
     return (<form action={"#"} method="post">
-        <TextField label={"name"} type={"text"} name={"name"} />
-        <TextField label={"surname"} type={"text"} name={"surname"} />
-        <TextField label={"email"} type={"email"} name={"email"} />
+        <TextField label={"name"} type={"text"} name={"name"}/>
+        <TextField label={"surname"} type={"text"} name={"surname"}/>
+        <TextField label={"email"} type={"email"} name={"email"}/>
         <TextareaAutosize aria-label={"message"} placeholder={'message'} name={"message"}/>
         <div className={'checkbox-area'}>
             <label className={'form_checkbox'}>
